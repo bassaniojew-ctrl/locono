@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locono - Hyperlocal Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-store"></i> Locono</h2>
+            </div>
+            <div class="nav-search">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search for products, stores...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-btn" id="loginBtn">
+                    <i class="fas fa-user"></i> Login
+                </button>
+                <button class="nav-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Everything Local, Everything Fresh</h1>
+            <p>Connect with nearby stores, compare prices, and get your essentials delivered</p>
+            <div class="hero-search">
+                <input type="text" placeholder="What are you looking for?" id="heroSearch">
+                <button id="heroSearchBtn">Search</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="floating-cards">
+                <div class="card groceries">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span>Groceries</span>
+                </div>
+                <div class="card bakery">
+                    <i class="fas fa-bread-slice"></i>
+                    <span>Bakery</span>
+                </div>
+                <div class="card sweets">
+                    <i class="fas fa-candy-cane"></i>
+                    <span>Sweets</span>
+                </div>
+                <div class="card street-food">
+                    <i class="fas fa-utensils"></i>
+                    <span>Street Food</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="groceries">
+                    <div class="category-icon">
+                        <i class="fas fa-shopping-basket"></i>
+                    </div>
+                    <h3>Groceries</h3>
+                    <p>Daily essentials from local stores</p>
+                    <div class="subcategories">
+                        <span>Dairy</span>
+                        <span>Pulses</span>
+                        <span>Vegetables</span>
+                        <span>Fruits</span>
+                    </div>
+                </div>
+                <div class="category-card" data-category="bakery">
+                    <div class="category-icon">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <h3>Bakery</h3>
+                    <p>Fresh bread, cakes & pastries</p>
+                    <div class="subcategories">
+                        <span>Bread</span>
+                        <span>Biscuits</span>
+                        <span>Cakes</span>
+                        <span>Pastries</span>
+                    </div>
+                </div>
+                <div class="category-card" data-category="street_food">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Street Food</h3>
+                    <p>Local street food & snacks</p>
+                    <div class="subcategories">
+                        <span>Chats</span>
+                        <span>Rolls</span>
+                        <span>Snacks</span>
+                        <span>Beverages</span>
+                    </div>
+                </div>
+                <div class="category-card" data-category="sweets">
+                    <div class="category-icon">
+                        <i class="fas fa-candy-cane"></i>
+                    </div>
+                    <h3>Sweets</h3>
+                    <p>Traditional sweets & desserts</p>
+                    <div class="subcategories">
+                        <span>Milk Sweets</span>
+                        <span>Dry Sweets</span>
+                        <span>Famous Specials</span>
+                        <span>Festival Specials</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Locono Section -->
+    <section class="why-locono">
+        <div class="container">
+            <h2>Why Choose Locono?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Trusted & Local</h3>
+                    <p>Verified local vendors with quality assurance</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Best Prices</h3>
+                    <p>Compare prices across vendors and save money</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick delivery from nearby stores</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Daily Subscriptions</h3>
+                    <p>Subscribe for daily essentials like milk & bread</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section class="subscription-section">
+        <div class="container">
+            <h2>Daily Essentials Subscription</h2>
+            <p>Never run out of daily essentials with our subscription service</p>
+            <div class="subscription-items">
+                <div class="subscription-item">
+                    <i class="fas fa-milk"></i>
+                    <span>Milk</span>
+                </div>
+                <div class="subscription-item">
+                    <i class="fas fa-egg"></i>
+                    <span>Eggs</span>
+                </div>
+                <div class="subscription-item">
+                    <i class="fas fa-bread-slice"></i>
+                    <span>Bread</span>
+                </div>
+                <div class="subscription-item">
+                    <i class="fas fa-cheese"></i>
+                    <span>Curd</span>
+                </div>
+            </div>
+            <button class="cta-btn" id="subscribeBtn">Start Subscription</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Locono</h3>
+                    <p>Connecting local businesses with customers for a better shopping experience.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#groceries">Groceries</a></li>
+                        <li><a href="#bakery">Bakery</a></li>
+                        <li><a href="#street-food">Street Food</a></li>
+                        <li><a href="#sweets">Sweets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope"></i> support@locono.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Locono. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Welcome to Locono</h2>
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+            <form id="loginForm" class="auth-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <form id="registerForm" class="auth-form" style="display: none;">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="password" placeholder="Password" required>
+                <select required>
+                    <option value="">Select Role</option>
+                    <option value="customer">Customer</option>
+                    <option value="vendor">Vendor</option>
+                </select>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-total">
+                <h3>Total: ₹<span id="cartTotal">0</span></h3>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
